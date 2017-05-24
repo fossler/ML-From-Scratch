@@ -1,7 +1,6 @@
 # Machine Learning From Scratch
 
-
-###About
+## About
 Python implementations of some of the fundamental Machine Learning models and algorithms from scratch.
 
 The purpose of this project is not to produce as optimized and computationally efficient algorithms as possible 
@@ -10,14 +9,25 @@ The reason the project uses scikit-learn is to evaluate the implementations on s
 
 Feel free to [reach out](mailto:eriklindernoren@gmail.com) if you can think of ways to expand this project.
 
-
+## Table of Contents
+- [Machine Learning From Scratch](#machine-learning-from-scratch)
+  * [About](#about)
+  * [Table of Contents](#table-of-contents)
+  * [Usage](#usage)
+    + [Installation](#installation)
+    + [Classification](#classification)
+    + [Clustering](#clustering)
+    + [Association Analysis](#association-analysis)
+  * [Current Implementations](#current-implementations)
+    + [Supervised Learning](#supervised-learning)
+    + [Unsupervised Learning](#unsupervised-learning)
+    
+## Usage
 ### Installation
-    pip install -r requirements.txt
+    $ pip install -r requirements.txt
 
-
-### Running Implementations
-    python supervised_learning/multilayer_perceptron.py
-   
+### Classification
+    $ python supervised_learning/multilayer_perceptron.py
 
 <p align="center">
     <img src="http://eriklindernoren.se/images/mlp.png">
@@ -26,9 +36,38 @@ Feel free to [reach out](mailto:eriklindernoren@gmail.com) if you can think of w
     Figure: Classification of the digit dataset using MLP.
 </p>
 
+### Clustering
+    $ python unsupervised_learning/dbscan.py
+   
+<p align="center">
+    <img src="http://eriklindernoren.se/images/dbs.png">
+</p>
+<p align="center">
+    Figure: Clustering of the moons dataset using DBSCAN.
+</p>
 
-##Current Implementations
-####Supervised Learning:
+### Association Analysis
+    $ python unsupervised_learning/apriori.py 
+    - Apriori -
+    Minimum - support: 0.25, confidence: 0.8
+    Transactions:
+        [1, 2, 3, 4]
+        [1, 2, 4]
+        [1, 2]
+        [2, 3, 4]
+        [2, 3]
+        [3, 4]
+        [2, 4]
+    Frequent Itemsets:
+        [1, 2, 3, 4, [1, 2], [1, 4], [2, 3], [2, 4], [3, 4], [1, 2, 4], [2, 3, 4]]
+    Rules:
+        1 -> 2 (support: 0.43, confidence: 1.0)
+        4 -> 2 (support: 0.57, confidence: 0.8)
+        [1, 4] -> 2 (support: 0.29, confidence: 1.0)
+
+
+## Current Implementations
+### Supervised Learning
 - [Adaboost](supervised_learning/adaboost.py)
 - [Decision Tree](supervised_learning/decision_tree.py)
 - [Gradient Boosting](supervised_learning/gradient_boosting.py)
@@ -45,7 +84,7 @@ Feel free to [reach out](mailto:eriklindernoren@gmail.com) if you can think of w
 - [Support Vector Machine](supervised_learning/support_vector_machine.py)
 - [XGBoost](supervised_learning/xgboost.py)
 
-####Unsupervised Learning:
+### Unsupervised Learning
 - [Apriori](unsupervised_learning/apriori.py)
 - [DBSCAN](unsupervised_learning/dbscan.py)
 - [FP-Growth](unsupervised_learning/fp_growth.py)
